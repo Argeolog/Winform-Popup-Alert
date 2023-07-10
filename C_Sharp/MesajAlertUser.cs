@@ -23,7 +23,7 @@ namespace Mesaj_Alert
         public MesajAlertUser()
         {
             InitializeComponent();
-            //this.Visible = false; // Bunu Yazdiğimizda Load Çalışmıyor. Yüzden Harici Fonksiyon Yazdık
+            this.Visible = false; // Bunu Yazdiğimizda Load Çalışmıyor. Yüzden Harici Fonksiyon Yazdık
         }
 
         private void Animasyon_Timer_Tick(object sender, EventArgs e)
