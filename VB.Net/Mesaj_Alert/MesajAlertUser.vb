@@ -35,13 +35,13 @@ Public Class MesajAlertUser
 
 
         AddHandler AlertForm.SizeChanged, AddressOf Size_Ayarla
-        Size_Ayarla()
+        Size_Ayarla(Nothing, Nothing)
         Me.Visible = True
 
     End Sub
 
 
-    Sub Size_Ayarla()
+    Sub Size_Ayarla(sender As Object, e As EventArgs)
         Dim Yukseklik As Integer = Me.Height
         If YukariAnimasyonAktif = False Then Yukseklik = 0
 
