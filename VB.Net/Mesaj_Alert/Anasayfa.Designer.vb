@@ -29,6 +29,7 @@ Partial Class Anasayfa
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Uygula_Buton = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Alert_Kapanmasini_Bekle_Check = New System.Windows.Forms.CheckBox()
         CType(Me.Alert_Time_Out_Text, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -99,11 +100,24 @@ Partial Class Anasayfa
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Powered By Argeolog"
         '
+        'Alert_Kapanmasini_Bekle_Check
+        '
+        Me.Alert_Kapanmasini_Bekle_Check.AutoSize = True
+        Me.Alert_Kapanmasini_Bekle_Check.Checked = True
+        Me.Alert_Kapanmasini_Bekle_Check.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Alert_Kapanmasini_Bekle_Check.Location = New System.Drawing.Point(261, 41)
+        Me.Alert_Kapanmasini_Bekle_Check.Name = "Alert_Kapanmasini_Bekle_Check"
+        Me.Alert_Kapanmasini_Bekle_Check.Size = New System.Drawing.Size(163, 17)
+        Me.Alert_Kapanmasini_Bekle_Check.TabIndex = 7
+        Me.Alert_Kapanmasini_Bekle_Check.Text = "Alert Kapanana  Kadar Bekle"
+        Me.Alert_Kapanmasini_Bekle_Check.UseVisualStyleBackColor = True
+        '
         'Anasayfa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Alert_Kapanmasini_Bekle_Check)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Uygula_Buton)
         Me.Controls.Add(Me.Label2)
@@ -127,4 +141,5 @@ Partial Class Anasayfa
     Friend WithEvents Label2 As Label
     Friend WithEvents Uygula_Buton As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents Alert_Kapanmasini_Bekle_Check As CheckBox
 End Class

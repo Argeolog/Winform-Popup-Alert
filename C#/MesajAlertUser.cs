@@ -19,7 +19,7 @@ namespace Mesaj_Alert
         int TimerSay;
         bool YukariAnimasyonAktif;
        public  bool FormHareketHalinde;
-
+        public bool AlertAcik=true;
         public MesajAlertUser()
         {
             InitializeComponent();
@@ -52,6 +52,7 @@ namespace Mesaj_Alert
                 if (TimerSay >= 60)
                 {
                     FormHareketHalinde = false;
+                    AlertAcik = false;
                     Animasyon_Timer.Stop();
                     this.Visible = false;
                     AlertForm_.Controls.Remove(this);
@@ -70,10 +71,7 @@ namespace Mesaj_Alert
             this.Location = new Point(AlertForm_.ClientRectangle.Location.X, (AlertForm_.ClientRectangle.Location.Y + AlertForm_.ClientRectangle.Height) - (this.Height - Yukseklik));
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-        }
+  
         public void Set_Setting(Form AlertForm, int AlertCloseTimeOut, string MessageText, bool YukariAnimasyonYap)
         {
             YukariAnimasyonAktif = YukariAnimasyonYap;
@@ -109,6 +107,9 @@ namespace Mesaj_Alert
             Animasyon_Timer.Enabled = true;
         }
 
-   
+        private void Alert_Label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

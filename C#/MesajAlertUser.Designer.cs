@@ -49,6 +49,7 @@
             this.Alert_Label.TabIndex = 1096;
             this.Alert_Label.Text = "---";
             this.Alert_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Alert_Label.Click += new System.EventHandler(this.Alert_Label_Click);
             // 
             // MesajAlertUser
             // 

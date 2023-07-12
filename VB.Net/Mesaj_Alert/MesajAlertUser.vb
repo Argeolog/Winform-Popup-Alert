@@ -10,6 +10,7 @@ Public Class MesajAlertUser
     Dim TimerSay As Integer
     Dim YukariAnimasyonAktif As Boolean
     Dim FormHareketHalinde As Boolean
+    Public AlertAcik As Boolean = True
     Sub New()
 
         ' This call is required by the designer.
@@ -69,6 +70,7 @@ Public Class MesajAlertUser
             Me.Location = New Point(Me.Location.X, Me.Location.Y + 1)
             If TimerSay >= 60 Then
                 FormHareketHalinde = False
+                AlertAcik = False
                 Animasyon_Timer.Stop()
                 Me.Visible = False
                 AlertForm_.Controls.Remove(Me)
