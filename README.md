@@ -6,4 +6,4 @@ Versiyon 1.1 Yayınlandı.
 Alert, tamamen kapandıktan sonra, kodun bir alt satıra geçmesini sağlayan bir özellik eklendi.
 
 Versiyon 1.2 Yayınlandı.
-UserControl Nesnesi, Boyutları değiştirilebilir. Kontrolün başlangıç ve biriş noktaları otomatik hesaplanır.
+UserControl Nesnesi, Boyutları değiştirilebilir. Kontrolün başlangıç ve bitiş noktaları otomatik hesaplanır.
