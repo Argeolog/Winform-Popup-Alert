@@ -11,13 +11,16 @@ Public Class MesajAlertUser
     Dim YukariAnimasyonAktif As Boolean
     Dim FormHareketHalinde As Boolean
     Public AlertAcik As Boolean = True
+    Dim KapanmaSize As Integer
+    Dim AcilmaSize As Integer
     Sub New()
 
         ' This call is required by the designer.
 
         InitializeComponent()
         Me.Visible = False ' Bunu Yazdiğimizda Load Çalışmıyor. Yüzden Harici Fonksiyon Yazdık
-
+        KapanmaSize = Me.ClientSize.Height
+        AcilmaSize = KapanmaSize - 2
     End Sub
     Public Sub Set_Setting(AlertForm As Form, AlertCloseTimeOut As Integer, MessageText As String, YukariAnimasyonYap As Boolean)
         YukariAnimasyonAktif = YukariAnimasyonYap
@@ -57,7 +60,7 @@ Public Class MesajAlertUser
         If YukariAnimasyonAktif = True Then
             Me.Location = New Point(Me.Location.X, Me.Location.Y - 1)
 
-            If TimerSay >= 58 Then
+            If TimerSay >= AcilmaSize Then
                 TimerSay = 0
                 Animasyon_Timer.Stop()
                 Animasyon_Timer.Interval = Alert_CloseTimeOut
@@ -68,7 +71,7 @@ Public Class MesajAlertUser
         Else
             Animasyon_Timer.Interval = 1
             Me.Location = New Point(Me.Location.X, Me.Location.Y + 1)
-            If TimerSay >= 60 Then
+            If TimerSay >= KapanmaSize Then
                 FormHareketHalinde = False
                 AlertAcik = False
                 Animasyon_Timer.Stop()

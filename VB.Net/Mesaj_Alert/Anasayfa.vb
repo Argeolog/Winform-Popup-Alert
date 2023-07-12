@@ -9,7 +9,7 @@
 			Application.DoEvents()
 			Threading.Thread.Sleep(1)
 		End While
-		MsgBox("ok")
+
 	End Sub
 
 	Private Sub Anasayfa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -17,7 +17,13 @@
     End Sub
 
 	Private Sub Uygula_Buton_Click(sender As Object, e As EventArgs) Handles Uygula_Buton.Click
+
+
 		Alert_Goster(Me, Yazi_Text.Text, Alert_Kapanmasini_Bekle_Check.Checked)
+		' Alert Kapandıktan sonra kod bir alt satıra geçsin isteniliyorsa, Alert Kapanmasını Bekle,true olmalıdır.
+
+
+
 	End Sub
 
 End Class

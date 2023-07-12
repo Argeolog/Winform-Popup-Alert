@@ -20,10 +20,14 @@ namespace Mesaj_Alert
         bool YukariAnimasyonAktif;
        public  bool FormHareketHalinde;
         public bool AlertAcik=true;
+        int KapanmaSize;
+        int AcilmaSize;
         public MesajAlertUser()
         {
             InitializeComponent();
             this.Visible = false; // Bunu Yazdiğimizda Load Çalışmıyor. Yüzden Harici Fonksiyon Yazdık
+            KapanmaSize = this.ClientSize.Height;
+            AcilmaSize = (KapanmaSize - 2);
         }
 
         private void Animasyon_Timer_Tick(object sender, EventArgs e)
@@ -35,7 +39,7 @@ namespace Mesaj_Alert
             {
                 this.Location = new Point(this.Location.X, this.Location.Y - 1);
 
-                if (TimerSay >= 58)
+                if (TimerSay >= AcilmaSize)
                 {
                     TimerSay = 0;
                     Animasyon_Timer.Stop();
@@ -49,7 +53,7 @@ namespace Mesaj_Alert
             {
                 Animasyon_Timer.Interval = 1;
                 this.Location = new Point(this.Location.X, this.Location.Y + 1);
-                if (TimerSay >= 60)
+                if (TimerSay >= KapanmaSize)
                 {
                     FormHareketHalinde = false;
                     AlertAcik = false;
